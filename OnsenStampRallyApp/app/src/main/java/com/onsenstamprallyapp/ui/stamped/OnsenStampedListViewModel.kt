@@ -1,25 +1,24 @@
 package com.onsenstamprallyapp.ui.stamped
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
+import com.onsenstamprallyapp.log.LogTag
+import com.onsenstamprallyapp.log.LogWrapper
 
 class OnsenStampedListViewModel(
 
 ) : ViewModel() {
+    private val logTag by LogTag()
+
     init {
-        Log.d(LOG_TAG, "init")
+        LogWrapper.print(logTag, "init")
     }
 
     override fun onCleared() {
         super.onCleared()
-        Log.d(LOG_TAG, "onCleared")
+        LogWrapper.print(logTag, "onCleared")
     }
 
     fun print() {
-        Log.d(LOG_TAG, "print")
-    }
-
-    companion object {
-        private const val LOG_TAG = "OnsenStampedListViewModel"
+        LogWrapper.print(logTag, "print")
     }
 }
