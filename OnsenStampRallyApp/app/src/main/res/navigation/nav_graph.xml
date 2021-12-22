@@ -16,4 +16,10 @@
         android:name="com.onsenstamprallyapp.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second" />
+
+    <fragment
+        android:id="@+id/StampedListFragment"
+        android:name="com.onsenstamprallyapp.ui.stamped.StampedListFragment"
+        android:label="@string/stamped_list_fragment_label"
+        tools:layout="@layout/fragment_stamped_list" />
 </navigation>
