@@ -4,15 +4,15 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.onsenstamprallyapp.R
-import com.onsenstamprallyapp.databinding.FragmentStampedListBinding
+import com.onsenstamprallyapp.databinding.FragmentOnsenStampedListBinding
 
-class StampedListFragment : Fragment(R.layout.fragment_stamped_list) {
-    private var _binding: FragmentStampedListBinding? = null
+class OnsenStampedListFragment : Fragment(R.layout.fragment_onsen_stamped_list) {
+    private var _binding: FragmentOnsenStampedListBinding? = null
     private val binding get() = _binding!!
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentStampedListBinding.bind(view)
+        _binding = FragmentOnsenStampedListBinding.bind(view)
     }
 
     override fun onDestroyView() {

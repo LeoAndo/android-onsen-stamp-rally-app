@@ -1,16 +1,17 @@
-package com.onsenstamprallyapp
+package com.onsenstamprallyapp.ui.map
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.onsenstamprallyapp.databinding.FragmentFirstBinding
+import com.onsenstamprallyapp.R
+import com.onsenstamprallyapp.databinding.FragmentOnsenMapBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FirstFragment : Fragment(R.layout.fragment_first) {
+class OnsenMapFragment : Fragment(R.layout.fragment_onsen_map) {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: FragmentOnsenMapBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -18,7 +19,7 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentFirstBinding.bind(view)
+        _binding = FragmentOnsenMapBinding.bind(view)
         // findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
     }
 

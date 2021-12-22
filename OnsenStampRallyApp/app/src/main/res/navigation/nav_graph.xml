@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.onsenstamprallyapp.FirstFragment"
+        android:name="com.onsenstamprallyapp.ui.map.OnsenMapFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first" />
+        tools:layout="@layout/fragment_onsen_map" />
 
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.onsenstamprallyapp.SecondFragment"
+        android:name="com.onsenstamprallyapp.ui.list.OnsenListFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_onsen_list" />
 
     <fragment
         android:id="@+id/StampedListFragment"
-        android:name="com.onsenstamprallyapp.ui.stamped.StampedListFragment"
+        android:name="com.onsenstamprallyapp.ui.stamped.OnsenStampedListFragment"
         android:label="@string/stamped_list_fragment_label"
-        tools:layout="@layout/fragment_stamped_list" />
+        tools:layout="@layout/fragment_onsen_stamped_list" />
 </navigation>
