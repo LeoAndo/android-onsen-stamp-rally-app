@@ -3,8 +3,11 @@ package com.onsenstamprallyapp.ui.stamped
 import androidx.lifecycle.ViewModel
 import com.onsenstamprallyapp.log.LogTag
 import com.onsenstamprallyapp.log.LogWrapper
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class OnsenStampedListViewModel(
+@HiltViewModel
+class OnsenStampedListViewModel @Inject constructor(
 
 ) : ViewModel() {
     private val logTag by LogTag()

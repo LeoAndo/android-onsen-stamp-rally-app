@@ -7,10 +7,9 @@ import androidx.fragment.app.viewModels
 import com.onsenstamprallyapp.R
 import com.onsenstamprallyapp.databinding.FragmentOnsenMapBinding
 import com.onsenstamprallyapp.ui.util.viewBindings
+import dagger.hilt.android.AndroidEntryPoint
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
+@AndroidEntryPoint
 class OnsenMapFragment : Fragment(R.layout.fragment_onsen_map) {
 
     private val binding by viewBindings(FragmentOnsenMapBinding::bind)
