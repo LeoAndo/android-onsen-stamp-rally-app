@@ -32,6 +32,23 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+    // ADD-FLAVOR-START
+    flavorDimensions "version"
+    productFlavors {
+        asakusayumeguri2021 {
+            dimension "version"
+            applicationIdSuffix ".asakusayumeguri2021"
+            versionNameSuffix "-asakusayumeguri2021"
+        }
+        tokyoyuran2021 {
+            dimension "version"
+            applicationIdSuffix ".tokyoyuran2021"
+            versionNameSuffix "-tokyoyuran2021"
+        }
+    }
+    // ADD-FLAVOR-END
+
 }
 
 dependencies {
