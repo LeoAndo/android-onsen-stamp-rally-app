@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/FirstFragment">
+    app:startDestination="@+id/OnsenMapFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/OnsenMapFragment"
         android:name="com.onsenstamprallyapp.ui.map.OnsenMapFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_onsen_map" />
 
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/OnsenListFragment"
         android:name="com.onsenstamprallyapp.ui.list.OnsenListFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_onsen_list" />
 
     <fragment
-        android:id="@+id/StampedListFragment"
+        android:id="@+id/OnsenStampedListFragment"
         android:name="com.onsenstamprallyapp.ui.stamped.OnsenStampedListFragment"
         android:label="@string/stamped_list_fragment_label"
         tools:layout="@layout/fragment_onsen_stamped_list" />
