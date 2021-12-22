@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.FirstFragment, R.id.SecondFragment
+                R.id.FirstFragment, R.id.SecondFragment, R.id.StampedListFragment
             ), binding.drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateContent(destinationId: Int) {
         when (destinationId) {
-            R.id.FirstFragment, R.id.SecondFragment -> {
+            R.id.FirstFragment, R.id.SecondFragment, R.id.StampedListFragment -> {
                 supportActionBar?.show()
                 binding.navView.isVisible = true
             }
