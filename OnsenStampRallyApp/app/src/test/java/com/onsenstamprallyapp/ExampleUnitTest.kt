@@ -1,4 +1,4 @@
-package com.example.onsenstamprallyapp
+package com.onsenstamprallyapp
 
 import org.junit.Test
 
