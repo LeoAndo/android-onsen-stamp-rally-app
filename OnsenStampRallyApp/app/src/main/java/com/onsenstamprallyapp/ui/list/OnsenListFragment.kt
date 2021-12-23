@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.onsenstamprallyapp.R
 import com.onsenstamprallyapp.databinding.FragmentOnsenListBinding
@@ -20,7 +21,6 @@ class OnsenListFragment : Fragment(R.layout.fragment_onsen_list), AutoCompleteTe
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         viewModel.print()
 
         val testData = listOf(
@@ -39,6 +39,11 @@ class OnsenListFragment : Fragment(R.layout.fragment_onsen_list), AutoCompleteTe
 
         val onsenListAdapter = OnsenListAdapter {
             Toast.makeText(requireContext(), it.title, Toast.LENGTH_SHORT).show()
+            findNavController().navigate(
+                OnsenListFragmentDirections.actionOnsenListFragmentToOnsenDetailInfoFragment(
+                    it
+                )
+            )
         }
         onsenListAdapter.submitList(testData)
         binding.onsenList.apply {
