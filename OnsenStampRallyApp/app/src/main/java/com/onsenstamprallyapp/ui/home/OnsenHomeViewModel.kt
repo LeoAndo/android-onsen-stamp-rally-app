@@ -1,4 +1,4 @@
-package com.onsenstamprallyapp.ui.map
+package com.onsenstamprallyapp.ui.home
 
 import androidx.lifecycle.ViewModel
 import com.onsenstamprallyapp.log.LogTag
@@ -7,7 +7,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class OnsenMapViewModel @Inject constructor(
+class OnsenHomeViewModel @Inject constructor(
 
 ) : ViewModel() {
     private val logTag by LogTag()
