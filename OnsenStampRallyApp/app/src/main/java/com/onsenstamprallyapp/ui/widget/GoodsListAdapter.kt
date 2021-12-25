@@ -30,6 +30,9 @@ internal class GoodsListAdapter() : ListAdapter<Goods, VH>(ITEM_CALLBACK) {
             titleView.text = goods.title
             val subtitle = itemView.findViewById<TextView>(R.id.subtitle)
             subtitle.text = goods.description
+
+            val subtitle2 = itemView.findViewById<TextView>(R.id.subtitle2)
+            subtitle2.text = itemView.context.getString(R.string.stamp_count_desc, goods.stamps)
         }
     }
 }

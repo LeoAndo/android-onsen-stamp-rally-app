@@ -52,7 +52,7 @@ internal class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.OnsenHomeFragment, R.id.OnsenListFragment, R.id.OnsenStampedListFragment
+                R.id.OnsenHomeFragment, R.id.OnsenListFragment, R.id.GoodsListFragment
             ), binding.drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -98,7 +98,7 @@ internal class MainActivity : AppCompatActivity() {
 
     private fun updateContent(destinationId: Int) {
         when (destinationId) {
-            R.id.OnsenHomeFragment, R.id.OnsenStampedListFragment -> {
+            R.id.OnsenHomeFragment -> {
                 supportActionBar?.show()
                 binding.appBarMain.fab.show()
             }

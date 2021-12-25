@@ -10,9 +10,10 @@
     <string name="detail">OnsenDetailInfoFragment</string>
     <string name="error_dialog_title">Error</string>
     <string name="see_more">see more</string>
-    <string name="developer_mail_address">leo.info.777@gmail.com</string>
+    <string name="developer_mail_address">leo.777.info@gmail.com</string>
     <string name="mail_subject">Questions about the stamp rally app</string>
     <string name="mail_text">Please describe the content of the question</string>
     <string name="fab_message">Click if you want to contact the developer</string>
     <string name="fab_action_message">Go To Mail App</string>
+    <string name="stamp_count_desc">Number of stamps required to obtain: %d</string>
 </resources>

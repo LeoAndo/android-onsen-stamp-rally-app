@@ -14,8 +14,8 @@
             android:title="@string/second_fragment_label" />
 
         <item
-            android:id="@+id/OnsenStampedListFragment"
-            android:icon="@drawable/ic_baseline_done_24"
+            android:id="@+id/GoodsListFragment"
+            android:icon="@drawable/ic_baseline_card_giftcard_24"
             android:title="@string/goods_list_fragment_label" />
     </group>
 </menu>

@@ -12,7 +12,7 @@ internal object GoodsData {
         Goods(
             title = "オリジナルマスク",
             description = "浅草銭湯オリジナルマスク全1種",
-            stamps = 5
+            stamps = 8
         ),
     )
 }
