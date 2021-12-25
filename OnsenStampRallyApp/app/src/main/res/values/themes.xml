@@ -10,4 +10,15 @@
     <style name="Theme.OnsenStampRallyApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.OnsenStampRallyApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.OnsenStampRallyApp.Starting" parent="Theme.SplashScreen">
+        <!-- Set the splash screen background, animated icon, and animation duration. -->
+        <item name="windowSplashScreenBackground">@color/material_dynamic_secondary20</item>
+        <!-- Use windowSplashScreenAnimatedIcon to add either a drawable or an animated drawable.
+        One of these is required.-->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_baseline_bedtime_24</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <!-- Set the theme of the Activity that directly follows your splash screen.-->
+        <item name="postSplashScreenTheme">@style/Theme.OnsenStampRallyApp</item>
+    </style>
 </resources>
