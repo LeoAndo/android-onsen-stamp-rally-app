@@ -1,6 +1,6 @@
 # アプリ概要
 
-このアプリは、銭湯のスタンプラリーをしているユーザー向けのスタンプ管理アプリになります。<br>
+銭湯協会で定期的に行われるスタンプラリーの管理アプリです。<br>
 スタンプ管理以外にも、各銭湯の詳細画面から外部アプリ「Google Map, GMail, Phone, Twitter, Facebook, Browser」などを起動し、銭湯の詳細情報をすぐに確認できるところがポイントです。<br>
 また、ビルドタイプを切り替えるだけで同じようなアプリを作る仕組みにしているのも特徴です。<br>
 
@@ -59,8 +59,6 @@
   - [room](https://developer.android.com/training/data-storage/room?hl=ja)を使用してローカルデータベースを管理
 
 # ソースコード
-
-## 共通コード
 
 [共通コード](https://github.com/LeoAndo/android-onsen-stamp-rally-app/tree/main/OnsenStampRallyApp/app/src/main)<br>
 [東京ゆらん 2021専用コード](https://github.com/LeoAndo/android-onsen-stamp-rally-app/tree/main/OnsenStampRallyApp/app/src/tokyoyuran2021)<br>
