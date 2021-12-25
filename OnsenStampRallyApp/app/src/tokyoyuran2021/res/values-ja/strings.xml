@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">浅草湯めぐり2021</string>
+    <string name="app_name">東京ゆらん2021</string>
+    <string name="lbl_period">2021年11月26日(金)から2022年3月31日(木)まで\n応募締め切り 2022年4月7日(木)</string>
+    <string name="lbl_description">銭湯楽しく巡る、湯巡りシールラリー</string>
 </resources>
