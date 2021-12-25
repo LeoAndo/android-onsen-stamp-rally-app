@@ -15,6 +15,8 @@ internal object OnsenData {
             regularHoliday = "月曜",
             businessHours = "１５：００−２５：００",
             explanationOfSaunaFee = "サウナ　３１０円",
+            isFreeWifi = true,
+            isRunningStation = true
         ),
         OnsenEntity(
             name = "第一金乗湯",
@@ -27,6 +29,8 @@ internal object OnsenData {
             regularHoliday = "不定休",
             businessHours = "１６：００−２４：００ 日曜は１５時から営業",
             explanationOfSaunaFee = "サウナなし",
+            isFreeWifi = true,
+            isRunningStation = true
         ),
         OnsenEntity(
             name = "RAKU SPA 1010 神田",
@@ -39,6 +43,7 @@ internal object OnsenData {
             regularHoliday = "",
             businessHours = "11:00～翌8:00（最終受付 翌7:00）",
             explanationOfSaunaFee = "サウナあり",
+            isFreeWifi = true,
         ),
         OnsenEntity(
             name = "ひだまりの泉 萩の湯",
@@ -52,6 +57,7 @@ internal object OnsenData {
             regularHoliday = "第３火曜",
             businessHours = "６：００−９：００、１１：００−２５：００ ※閉店30分前に受付終了",
             explanationOfSaunaFee = "サウナあり",
+            isFreeWifi = true,
         ),
         OnsenEntity(
             name = "寿湯",
@@ -66,6 +72,7 @@ internal object OnsenData {
             regularHoliday = "第３木曜 １２月は休まず営業",
             businessHours = "１１：００−２５：３０ 最終受付２５：０５",
             explanationOfSaunaFee = "サウナあり",
+            isRunningStation = true
         ),
         OnsenEntity(
             name = "日の出湯",
@@ -78,6 +85,7 @@ internal object OnsenData {
             regularHoliday = "水曜",
             businessHours = "１５：００−２３：４０",
             explanationOfSaunaFee = "サウナあり",
+            isRunningStation = true
         ),
         OnsenEntity(
             name = "弁天湯",
@@ -91,6 +99,7 @@ internal object OnsenData {
             regularHoliday = "第２、４月曜\n" + "１月１日は休業",
             businessHours = "１５：３０−２３：００",
             explanationOfSaunaFee = "サウナなし",
+            isRunningStation = true
         ),
         OnsenEntity(
             name = "薬師湯",
@@ -105,6 +114,7 @@ internal object OnsenData {
             regularHoliday = "水曜（祝日の場合は火曜）",
             businessHours = "１５：３０−２６：００",
             explanationOfSaunaFee = "サウナあり",
+            isRunningStation = true
         ),
         OnsenEntity(
             name = "なみのゆ",
@@ -119,6 +129,8 @@ internal object OnsenData {
             regularHoliday = "土曜",
             businessHours = "１５：００−２５：００ 日曜は８：００−１２：００も営業、水曜は１８：００開店",
             explanationOfSaunaFee = "サウナなし",
+            isFreeWifi = true,
+            isRunningStation = true
         ),
         OnsenEntity(
             name = "井草湯",
@@ -133,6 +145,7 @@ internal object OnsenData {
             regularHoliday = "月曜",
             businessHours = "１４：３０−２２：３０ （最終入店２２：００）",
             explanationOfSaunaFee = "サウナあり",
+            isFreeWifi = true,
         ),
         OnsenEntity(
             name = "えごた湯",
@@ -145,6 +158,7 @@ internal object OnsenData {
             regularHoliday = "月曜（祝日の場合は翌火曜休み）",
             businessHours = "１５：００−２４：００（最終入店は23：30まで。※サウナは23：00で受付を締め切ります）",
             explanationOfSaunaFee = "サウナあり",
+            isRunningStation = true
         ),
         OnsenEntity(
             name = "一の湯",
@@ -157,6 +171,8 @@ internal object OnsenData {
             regularHoliday = "水曜",
             businessHours = "１６：００−２５：３０ 日祝は１５：００−２５：３０",
             explanationOfSaunaFee = "サウナあり",
+            isFreeWifi = true,
+            isRunningStation = true
         ),
         OnsenEntity(
             name = "昭和浴場",
@@ -169,6 +185,7 @@ internal object OnsenData {
             regularHoliday = "水曜",
             businessHours = "１５：３０−２５：３０ 金曜は翌３時まで営業",
             explanationOfSaunaFee = "サウナあり",
+            isRunningStation = true
         ),
         OnsenEntity(
             name = "松本湯",
@@ -185,6 +202,7 @@ internal object OnsenData {
             regularHoliday = "木曜 祝日は翌日休",
             businessHours = "１４：００−２４：００、日曜８：００−１２：００、１５：００−２４：００",
             explanationOfSaunaFee = "サウナあり",
+            isRunningStation = true
         ),
         OnsenEntity(
             name = "光明泉",
@@ -198,6 +216,7 @@ internal object OnsenData {
             regularHoliday = "不定休",
             businessHours = "１５：００−２５：００（最終受付２４：３０）",
             explanationOfSaunaFee = "サウナあり",
+            isRunningStation = true
         ),
         OnsenEntity(
             name = "庚申湯",
@@ -210,6 +229,8 @@ internal object OnsenData {
             regularHoliday = "月曜・第1火曜",
             businessHours = "１５：００−２３：００",
             explanationOfSaunaFee = "サウナあり",
+            isFreeWifi = true,
+            isRunningStation = true
         ),
     )
 }
