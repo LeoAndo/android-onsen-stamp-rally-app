@@ -69,13 +69,13 @@
 
             <TextView
                 android:id="@+id/textAddress"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
+                android:foreground="?attr/selectableItemBackground"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorLink"
                 app:layout_constraintBottom_toTopOf="@+id/materialDivider2"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5"
                 tools:text="台東区橋場２−２１−７" />
@@ -135,13 +135,13 @@
 
             <TextView
                 android:id="@+id/textTel"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
+                android:foreground="?attr/selectableItemBackground"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorLink"
                 app:layout_constraintBottom_toTopOf="@+id/materialDivider4"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9"
                 tools:text="0338769530" />
@@ -168,13 +168,13 @@
 
             <TextView
                 android:id="@+id/textMailAddress"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="9dp"
+                android:foreground="?attr/selectableItemBackground"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorLink"
                 app:layout_constraintBottom_toTopOf="@+id/materialDivider5"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView11"
                 tools:text="aaa@gmail.com" />
@@ -201,13 +201,13 @@
 
             <TextView
                 android:id="@+id/textInstagramUrl"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="9dp"
+                android:foreground="?attr/selectableItemBackground"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorLink"
                 app:layout_constraintBottom_toTopOf="@+id/materialDivider6"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView13"
                 tools:text="xxxxxx" />
@@ -234,13 +234,13 @@
 
             <TextView
                 android:id="@+id/textTwitterUrl"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="9dp"
+                android:foreground="?attr/selectableItemBackground"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorLink"
                 app:layout_constraintBottom_toTopOf="@+id/materialDivider7"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView15"
                 tools:text="xxxxx" />
@@ -267,13 +267,13 @@
 
             <TextView
                 android:id="@+id/textFacebookUrl"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
+                android:foreground="?attr/selectableItemBackground"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorLink"
                 app:layout_constraintBottom_toTopOf="@+id/materialDivider8"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView17"
                 tools:text="cccccccc" />
@@ -300,13 +300,13 @@
 
             <TextView
                 android:id="@+id/textHomepageUrl"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
+                android:foreground="?attr/selectableItemBackground"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorLink"
                 app:layout_constraintBottom_toTopOf="@+id/materialDivider9"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView19"
                 tools:text="https://www.taitosento.com/" />
