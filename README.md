@@ -49,10 +49,10 @@
     - FlowのcollectはviewModelで行う
 
 - domain Layer
- - 作成していない 
+  - 作成していない 
 
 - data Layer
- - [room](https://developer.android.com/training/data-storage/room?hl=ja)を使用してローカルデータベースを管理
+  - [room](https://developer.android.com/training/data-storage/room?hl=ja)を使用してローカルデータベースを管理
 
 # ソースコード
 
