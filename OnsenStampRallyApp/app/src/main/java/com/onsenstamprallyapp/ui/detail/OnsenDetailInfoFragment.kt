@@ -12,7 +12,6 @@ import com.onsenstamprallyapp.model.OnsenInfoDetail
 import com.onsenstamprallyapp.ui.util.AppLaunchHelper
 import com.onsenstamprallyapp.ui.util.showErrorDialog
 import com.onsenstamprallyapp.ui.util.viewBindings
-import com.onsenstamprallyapp.ui.widget.ToastHelper
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -23,8 +22,7 @@ internal class OnsenDetailInfoFragment : Fragment(R.layout.fragment_onsen_detail
     private val logTag by LogTag()
     private val navArgs by navArgs<OnsenDetailInfoFragmentArgs>()
     private val viewModel by viewModels<OnsenDetailInfoViewModel>()
-    @Inject
-    lateinit var toastHelper: ToastHelper
+
     @Inject
     lateinit var appLaunchHelper: AppLaunchHelper
 
@@ -84,15 +82,16 @@ internal class OnsenDetailInfoFragment : Fragment(R.layout.fragment_onsen_detail
 
             // listener
             textAddress.setOnClickListener {
-                toastHelper.showToast("a")
-                appLaunchHelper.launchMapApp(onsenInfo.latitude, onsenInfo.longitude, onsenInfo.address)
+                appLaunchHelper.launchMapApp(
+                    onsenInfo.latitude,
+                    onsenInfo.longitude,
+                    onsenInfo.address
+                )
             }
             textTel.setOnClickListener {
-                toastHelper.showToast("b")
                 appLaunchHelper.launchTelApp(onsenInfo.tel)
             }
             textMailAddress.setOnClickListener {
-                toastHelper.showToast("c")
                 appLaunchHelper.launchMailApp(
                     address = onsenInfo.mailAddress,
                     subject = "",
@@ -100,19 +99,15 @@ internal class OnsenDetailInfoFragment : Fragment(R.layout.fragment_onsen_detail
                 )
             }
             textInstagramUrl.setOnClickListener {
-                toastHelper.showToast("d")
                 appLaunchHelper.launchInstagramApp(onsenInfo.instagramUrl)
             }
             textTwitterUrl.setOnClickListener {
-                toastHelper.showToast("e")
                 appLaunchHelper.launchTwitterApp(onsenInfo.twitterUrl)
             }
             textFacebookUrl.setOnClickListener {
-                toastHelper.showToast("f")
                 appLaunchHelper.launchFacebookApp(onsenInfo.facebookUrl)
             }
             textHomepageUrl.setOnClickListener {
-                toastHelper.showToast("g")
                 appLaunchHelper.launchBrowserApp(onsenInfo.homepageUrl)
             }
         }

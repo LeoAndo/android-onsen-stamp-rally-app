@@ -6,8 +6,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="goods_list_fragment_label">Goods List</string>
     <string name="filter_search">Refined search</string>
-    <string name="OnsenDetailInfoFragment">OnsenDetailInfoFragment</string>
-    <string name="detail">OnsenDetailInfoFragment</string>
+    <string name="detail">detail</string>
     <string name="error_dialog_title">Error</string>
     <string name="see_more">see more</string>
     <string name="developer_mail_address">leo.777.info@gmail.com</string>
@@ -28,10 +27,10 @@
     <string name="trafficAccess">trafficAccess</string>
     <string name="tel">tel</string>
     <string name="mailAddress">mailAddress</string>
-    <string name="instagramUrl">instagramUrl</string>
-    <string name="twitterUrl">twitterのURL</string>
-    <string name="facebookUrl">facebookUrl</string>
-    <string name="homepageUrl">homepageUrl</string>
+    <string name="instagramUrl">instagram Url</string>
+    <string name="twitterUrl">twitter Url</string>
+    <string name="facebookUrl">facebook Url</string>
+    <string name="homepageUrl">homepage Url</string>
     <string name="regularHoliday">regularHoliday</string>
     <string name="businessHours">businessHours</string>
     <string name="explanationOfSaunaFee">explanationOfSaunaFee</string>
