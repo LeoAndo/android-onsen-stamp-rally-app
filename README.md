@@ -21,6 +21,10 @@
 |<img src="https://github.com/LeoAndo/android-onsen-stamp-rally-app/blob/main/capture/asakusa_yumeguri2021_os12_part1.gif" width=320 /> |
 
 
+# 開発環境
+
+<img width="624" alt="スクリーンショット 2021-12-26 4 41 19" src="https://user-images.githubusercontent.com/16476224/147392420-b0769ce1-da75-43ab-b713-3b4c5b91dc25.png">
+
 # アーキテクチャ
 
 - Single Module, Single Activity, MVVMを採用
