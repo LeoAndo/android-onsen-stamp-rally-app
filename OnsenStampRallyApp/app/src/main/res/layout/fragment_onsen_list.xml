@@ -18,20 +18,11 @@
             android:layout_height="match_parent"
             android:text="@string/filter_search" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filterBoxLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        <Spinner
+            android:id="@+id/filterBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent">
-
-            <AutoCompleteTextView
-                android:id="@+id/filterBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                tools:ignore="LabelFor" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="56dp"
+            android:entries="@array/search_filter_items" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/onsenList"

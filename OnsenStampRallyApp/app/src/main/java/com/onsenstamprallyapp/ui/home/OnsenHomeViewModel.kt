@@ -37,7 +37,7 @@ class OnsenHomeViewModel @Inject constructor(
             _uistate.value = UiState.Error(throwable.localizedMessage)
         }) {
             // Success
-            repository.getOnsenInfoList().collect {
+            repository.observeOnsenInfoList().collect {
                 val pickupOnsenList = it.take(3)
                 _uistate.value = UiState.Success(pickupOnsenList)
             }
@@ -47,5 +47,16 @@ class OnsenHomeViewModel @Inject constructor(
     override fun onCleared() {
         super.onCleared()
         LogWrapper.print(logTag, "onCleared")
+    }
+
+    fun updateStampStatus(id: Int, isStamped: Boolean) {
+        viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
+            // Faire
+            _uistate.value =
+                UiState.Error(throwable.localizedMessage)
+        }) {
+            // Success
+            repository.updateStampStatus(id, isStamped)
+        }
     }
 }

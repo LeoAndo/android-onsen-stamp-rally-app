@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_OnsenHomeFragment_to_GoodsListFragment"
             app:destination="@id/GoodsListFragment" />
+        <action
+            android:id="@+id/action_OnsenHomeFragment_to_OnsenDetailInfoFragment"
+            app:destination="@id/OnsenDetailInfoFragment" />
     </fragment>
 
     <fragment

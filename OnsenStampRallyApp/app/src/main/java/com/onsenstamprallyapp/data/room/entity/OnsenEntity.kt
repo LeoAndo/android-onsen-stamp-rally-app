@@ -3,6 +3,7 @@ package com.onsenstamprallyapp.data.room.entity
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.onsenstamprallyapp.model.OnsenInfo
+import com.onsenstamprallyapp.model.OnsenInfoDetail
 
 internal const val TABLE_NAME_ONSEN = "onsen"
 
@@ -42,3 +43,25 @@ internal fun List<OnsenEntity>.toOnsenInfoList(): List<OnsenInfo> {
 
 internal fun OnsenEntity.toOnsenInfo(): OnsenInfo =
     OnsenInfo(id = id, name = name, address = address, isStamped = isStamped)
+
+internal fun OnsenEntity.toOnsenInfoDetail(): OnsenInfoDetail =
+    OnsenInfoDetail(
+        id,
+        name,
+        address,
+        latitude,
+        longitude,
+        trafficAccess,
+        tel,
+        mailAddress,
+        instagramUrl,
+        twitterUrl,
+        facebookUrl,
+        homepageUrl,
+        regularHoliday,
+        businessHours,
+        explanationOfSaunaFee,
+        isRunningStation,
+        isFreeWifi,
+        isStamped
+    )

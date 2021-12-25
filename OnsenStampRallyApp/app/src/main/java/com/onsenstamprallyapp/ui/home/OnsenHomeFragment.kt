@@ -9,12 +9,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.onsenstamprallyapp.R
 import com.onsenstamprallyapp.data.GoodsData
 import com.onsenstamprallyapp.databinding.FragmentOnsenHomeBinding
+import com.onsenstamprallyapp.ui.util.showErrorDialog
 import com.onsenstamprallyapp.ui.util.viewBindings
 import com.onsenstamprallyapp.ui.widget.GoodsListAdapter
 import com.onsenstamprallyapp.ui.widget.OnsenListAdapter
-import com.onsenstamprallyapp.ui.widget.ToastHelper
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 internal class OnsenHomeFragment : Fragment(R.layout.fragment_onsen_home) {
@@ -22,9 +21,6 @@ internal class OnsenHomeFragment : Fragment(R.layout.fragment_onsen_home) {
     private lateinit var goodsListAdapter: GoodsListAdapter
     private val binding by viewBindings(FragmentOnsenHomeBinding::bind)
     private val viewModel by viewModels<OnsenHomeViewModel>()
-
-    @Inject
-    lateinit var toastHelper: ToastHelper
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -48,7 +44,13 @@ internal class OnsenHomeFragment : Fragment(R.layout.fragment_onsen_home) {
 
     private fun setupListAdapter() {
         listAdapter = OnsenListAdapter(onItemClick = {
-            toastHelper.showToast(it.name)
+            findNavController().navigate(
+                OnsenHomeFragmentDirections.actionOnsenHomeFragmentToOnsenDetailInfoFragment(
+                    it
+                )
+            )
+        }, onCheckedChange = { id, isStamped ->
+            viewModel.updateStampStatus(id, isStamped)
         })
         binding.onsenList.apply {
             adapter = listAdapter
@@ -69,7 +71,9 @@ internal class OnsenHomeFragment : Fragment(R.layout.fragment_onsen_home) {
         viewModel.uistate.observe(viewLifecycleOwner) {
             when (it) {
                 is UiState.Error -> {
-                    toastHelper.showToast(it.errorMessage)
+                    showErrorDialog(it.errorMessage, onPositiveButtonClicked = {
+
+                    })
                 }
                 is UiState.Success -> {
                     listAdapter.submitList(it.onsenList)

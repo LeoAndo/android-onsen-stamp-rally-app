@@ -3,9 +3,8 @@ package com.onsenstamprallyapp.ui.widget
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.CheckBox
 import android.widget.TextView
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -15,7 +14,8 @@ import com.onsenstamprallyapp.log.LogWrapper
 import com.onsenstamprallyapp.model.OnsenInfo
 
 internal class OnsenListAdapter(
-    private val onItemClick: (OnsenInfo) -> Unit
+    private val onItemClick: (OnsenInfo) -> Unit,
+    private val onCheckedChange: (Int, Boolean) -> Unit
 ) : ListAdapter<OnsenInfo, OnsenListAdapter.VH>(ITEM_CALLBACK) {
 
     private val logTag by LogTag()
@@ -37,11 +37,14 @@ internal class OnsenListAdapter(
             val subtitle = itemView.findViewById<TextView>(R.id.subtitle)
             subtitle.text = info.address
 
-            val stampImage = itemView.findViewById<ImageView>(R.id.stampImage)
-            stampImage.isVisible = info.isStamped
+            val stampedCheck = itemView.findViewById<CheckBox>(R.id.stamped)
+            stampedCheck.isChecked = info.isStamped
 
             itemView.rootView.setOnClickListener {
                 onItemClick(info)
+            }
+            stampedCheck.setOnCheckedChangeListener { buttonView, isChecked ->
+                onCheckedChange(info.id, isChecked)
             }
         }
     }

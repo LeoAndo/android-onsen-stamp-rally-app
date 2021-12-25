@@ -6,8 +6,10 @@ import com.onsenstamprallyapp.data.dbCall
 import com.onsenstamprallyapp.data.repository.OnsenInfoRepository
 import com.onsenstamprallyapp.data.room.dao.OnsenDao
 import com.onsenstamprallyapp.data.room.entity.toOnsenInfo
+import com.onsenstamprallyapp.data.room.entity.toOnsenInfoDetail
 import com.onsenstamprallyapp.data.room.entity.toOnsenInfoList
 import com.onsenstamprallyapp.model.OnsenInfo
+import com.onsenstamprallyapp.model.OnsenInfoDetail
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn
@@ -17,7 +19,7 @@ import javax.inject.Inject
 internal class OnsenInfoRepositoryImpl @Inject constructor(
     private val dao: OnsenDao
 ) : OnsenInfoRepository {
-    override fun getOnsenInfoList(): Flow<List<OnsenInfo>> {
+    override fun observeOnsenInfoList(): Flow<List<OnsenInfo>> {
         return dao.selectAllOnsenList().map { it.toOnsenInfoList() }.flowOn(Dispatchers.IO)
     }
 
@@ -45,8 +47,8 @@ internal class OnsenInfoRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun getOnsenInfo(id: Int): OnsenInfo {
-        return dbCall { dao.selectOnsenInfo(id).toOnsenInfo() }
+    override suspend fun getOnsenInfoDetail(id: Int): OnsenInfoDetail {
+        return dbCall { dao.selectOnsenInfo(id).toOnsenInfoDetail() }
     }
 
     override suspend fun setupOnsenData() {
@@ -58,6 +60,13 @@ internal class OnsenInfoRepositoryImpl @Inject constructor(
             }
             Log.d("OnsenInfoRepositoryImpl", "setupOnsenData!!!!!!")
             dao.insertOnsenData(*OnsenData.arrayData)
+        }
+    }
+
+    override suspend fun updateStampStatus(id: Int, isStamped: Boolean) {
+        dbCall {
+            val entity = dao.selectOnsenInfo(id).copy(isStamped = isStamped)
+            dao.updateOnsenData(entity)
         }
     }
 }
