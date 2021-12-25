@@ -1,12 +1,13 @@
 <resources>
-    <string name="app_name">OnsenStampRallyApp</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Home</string>
     <string name="second_fragment_label">Onsen List</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="stamped_list_fragment_label">Stamped List</string>
+    <string name="goods_list_fragment_label">Goods List</string>
     <string name="filter_search">Refined search</string>
     <string name="OnsenDetailInfoFragment">OnsenDetailInfoFragment</string>
     <string name="detail">OnsenDetailInfoFragment</string>
+    <string name="error_dialog_title">Error</string>
+    <string name="see_more">see more</string>
 </resources>

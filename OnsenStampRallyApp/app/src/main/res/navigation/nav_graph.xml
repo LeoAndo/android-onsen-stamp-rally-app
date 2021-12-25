@@ -24,7 +24,7 @@
     <fragment
         android:id="@+id/OnsenStampedListFragment"
         android:name="com.onsenstamprallyapp.ui.stamped.OnsenStampedListFragment"
-        android:label="@string/stamped_list_fragment_label"
+        android:label="@string/goods_list_fragment_label"
         tools:layout="@layout/fragment_onsen_stamped_list" />
 
     <fragment

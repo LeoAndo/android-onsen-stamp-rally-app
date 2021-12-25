@@ -2,7 +2,6 @@ package com.onsenstamprallyapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -64,14 +63,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateContent(destinationId: Int) {
         when (destinationId) {
-            R.id.OnsenHomeFragment, R.id.OnsenListFragment, R.id.OnsenStampedListFragment -> {
+            R.id.OnsenHomeFragment, R.id.OnsenStampedListFragment -> {
                 supportActionBar?.show()
-                binding.navView.isVisible = true
+                binding.appBarMain.fab.show()
             }
             else -> {
                 supportActionBar?.show()
-                binding.navView.isVisible = false
-                // binding.appBarMain.fab.hide()
+                binding.appBarMain.fab.hide()
             }
         }
     }
