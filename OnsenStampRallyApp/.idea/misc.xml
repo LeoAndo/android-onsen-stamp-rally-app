@@ -4,21 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/side_nav_bar.xml" value="0.152" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_location_24.xml" value="0.1905" />
+        <entry key="app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_onsen_icon.xml" value="0.2365" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.1037037037037037" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/dropdown_menu.xml" value="0.34692028985507245" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/fragment_onsen_detail.xml" value="0.25416666666666665" />
-        <entry key="app/src/main/res/layout/fragment_onsen_list.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_onsen_map.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_onsen_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_onsen_list.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_onsen_map.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_onsen_stamped_list.xml" value="0.13677811550151975" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_stamped_list.xml" value="0.14311043566362716" />
+        <entry key="app/src/main/res/layout/goods_list_item.xml" value="0.335" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/onsen_list_item.xml" value="0.23278985507246377" />
+        <entry key="app/src/main/res/layout/onsen_list_item.xml" value="0.45" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.33177083333333335" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.26666666666666666" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.3645833333333333" />

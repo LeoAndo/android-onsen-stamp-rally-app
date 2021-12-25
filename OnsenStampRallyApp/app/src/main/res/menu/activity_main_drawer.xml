@@ -16,6 +16,6 @@
         <item
             android:id="@+id/OnsenStampedListFragment"
             android:icon="@drawable/ic_baseline_done_24"
-            android:title="@string/stamped_list_fragment_label" />
+            android:title="@string/goods_list_fragment_label" />
     </group>
 </menu>

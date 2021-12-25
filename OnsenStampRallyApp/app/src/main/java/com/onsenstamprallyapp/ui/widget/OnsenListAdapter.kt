@@ -1,9 +1,11 @@
-package com.onsenstamprallyapp.ui.list
+package com.onsenstamprallyapp.ui.widget
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -31,9 +33,13 @@ internal class OnsenListAdapter(
     inner class VH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(info: OnsenInfo) {
             val titleView = itemView.findViewById<TextView>(R.id.title)
-            titleView.text = info.title
+            titleView.text = info.name
             val subtitle = itemView.findViewById<TextView>(R.id.subtitle)
-            subtitle.text = info.subTitle
+            subtitle.text = info.address
+
+            val stampImage = itemView.findViewById<ImageView>(R.id.stampImage)
+            stampImage.isVisible = info.isStamped
+
             itemView.rootView.setOnClickListener {
                 onItemClick(info)
             }
@@ -43,7 +49,7 @@ internal class OnsenListAdapter(
 
 private val ITEM_CALLBACK = object : DiffUtil.ItemCallback<OnsenInfo>() {
     override fun areItemsTheSame(oldItem: OnsenInfo, newItem: OnsenInfo): Boolean {
-        return oldItem.title == newItem.title
+        return oldItem.id == newItem.id
     }
 
     override fun areContentsTheSame(oldItem: OnsenInfo, newItem: OnsenInfo): Boolean {

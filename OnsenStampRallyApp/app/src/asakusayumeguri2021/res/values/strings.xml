@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Asakusa Yumeguri 2021</string>
+    <string name="lbl_period">From December 1st to January 30th</string>
+    <string name="lbl_description">Collect stamps and get original goods!</string>
+</resources>
