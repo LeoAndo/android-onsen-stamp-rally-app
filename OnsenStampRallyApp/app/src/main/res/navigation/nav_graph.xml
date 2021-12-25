@@ -9,7 +9,14 @@
         android:id="@+id/OnsenHomeFragment"
         android:name="com.onsenstamprallyapp.ui.home.OnsenHomeFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_onsen_home" />
+        tools:layout="@layout/fragment_onsen_home">
+        <action
+            android:id="@+id/action_OnsenHomeFragment_to_OnsenListFragment"
+            app:destination="@id/OnsenListFragment" />
+        <action
+            android:id="@+id/action_OnsenHomeFragment_to_GoodsListFragment"
+            app:destination="@id/GoodsListFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/OnsenListFragment"
@@ -18,17 +25,17 @@
         tools:layout="@layout/fragment_onsen_list">
         <action
             android:id="@+id/action_OnsenListFragment_to_OnsenDetailInfoFragment"
-            app:destination="@id/onsenDetailInfoFragment" />
+            app:destination="@id/OnsenDetailInfoFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/OnsenStampedListFragment"
-        android:name="com.onsenstamprallyapp.ui.stamped.OnsenStampedListFragment"
+        android:id="@+id/GoodsListFragment"
+        android:name="com.onsenstamprallyapp.ui.goods.GoodsListFragment"
         android:label="@string/goods_list_fragment_label"
-        tools:layout="@layout/fragment_onsen_stamped_list" />
+        tools:layout="@layout/fragment_onsen_goods_list" />
 
     <fragment
-        android:id="@+id/onsenDetailInfoFragment"
+        android:id="@+id/OnsenDetailInfoFragment"
         android:name="com.onsenstamprallyapp.ui.detail.OnsenDetailInfoFragment"
         android:label="@string/detail">
         <argument

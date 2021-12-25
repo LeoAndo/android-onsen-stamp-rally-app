@@ -33,8 +33,10 @@ class OnsenHomeViewModel @Inject constructor(
 
         // Flow
         viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
+            // Failure
             _uistate.value = UiState.Error(throwable.localizedMessage)
         }) {
+            // Success
             repository.getOnsenInfoList().collect {
                 val pickupOnsenList = it.take(3)
                 _uistate.value = UiState.Success(pickupOnsenList)

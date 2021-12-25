@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="action_settings">設定</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">ホーム</string>
+    <string name="second_fragment_label">温泉リスト</string>
+    <string name="goods_list_fragment_label">グッズ一覧</string>
+    <string name="filter_search">絞り込み</string>
+    <string name="OnsenDetailInfoFragment">詳細</string>
+    <string name="detail">詳細</string>
+    <string name="error_dialog_title">エラー</string>
+    <string name="see_more">もっと見る</string>
+    <string name="developer_mail_address">leo.777.info@gmail.com</string>
+    <string name="mail_subject">スタンプラリーアプリについての問い合わせ</string>
+    <string name="mail_text">問い合わせ内容をここに記載してください</string>
+    <string name="fab_message">開発者に問い合わせしたい場合は右のテキストをクリックしてください</string>
+    <string name="fab_action_message">アプリを起動する</string>
+    <string name="stamp_count_desc">獲得に必要なスタンプ数: %d</string>
+</resources>

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.onsenstamprallyapp.R
 import com.onsenstamprallyapp.data.GoodsData
@@ -34,10 +35,14 @@ internal class OnsenHomeFragment : Fragment(R.layout.fragment_onsen_home) {
 
     private fun setupSeeMoreListener() {
         binding.textSeeMore.setOnClickListener {
-            toastHelper.showToast("asasas")
+            findNavController().navigate(
+                OnsenHomeFragmentDirections.actionOnsenHomeFragmentToOnsenListFragment()
+            )
         }
         binding.textSeeMoreGoods.setOnClickListener {
-            toastHelper.showToast("asasas")
+            findNavController().navigate(
+                OnsenHomeFragmentDirections.actionOnsenHomeFragmentToGoodsListFragment()
+            )
         }
     }
 
