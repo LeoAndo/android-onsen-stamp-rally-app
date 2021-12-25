@@ -20,9 +20,6 @@ class OnsenListFragment : Fragment(R.layout.fragment_onsen_list) {
     private lateinit var onsenListAdapter: OnsenListAdapter
     private val binding by viewBindings(FragmentOnsenListBinding::bind)
     private val viewModel by viewModels<OnsenListViewModel>()
-//    private val exceptionHandler =
-//        ErrorHandler(fragment = this, onPositiveButtonClicked = {
-//        })
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
