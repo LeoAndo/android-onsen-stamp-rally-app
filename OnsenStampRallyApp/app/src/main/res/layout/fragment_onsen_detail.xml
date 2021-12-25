@@ -1,14 +1,513 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/textView"
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.onsenstamprallyapp.ui.detail.OnsenDetailInfoViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".ui.goods.GoodsListFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/textView17">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/store_name"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textStoreName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textStoreName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:text="富士の湯" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textStoreName" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/address"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
+
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorLink"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                tools:text="台東区橋場２−２１−７" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAddress" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/trafficAccess"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textTrafficAccess"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider2" />
+
+            <TextView
+                android:id="@+id/textTrafficAccess"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7"
+                tools:text="東京メトロ日比谷線「南千住」駅下車、徒歩15分" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textTrafficAccess" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/tel"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textTel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider3" />
+
+            <TextView
+                android:id="@+id/textTel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorLink"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                tools:text="0338769530" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider4"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textTel" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/mailAddress"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textMailAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider4" />
+
+            <TextView
+                android:id="@+id/textMailAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorLink"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                tools:text="aaa@gmail.com" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textMailAddress" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/instagramUrl"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textInstagramUrl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider5" />
+
+            <TextView
+                android:id="@+id/textInstagramUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorLink"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                tools:text="xxxxxx" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider6"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInstagramUrl" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/twitterUrl"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textTwitterUrl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider6" />
+
+            <TextView
+                android:id="@+id/textTwitterUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorLink"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                tools:text="xxxxx" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider7"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textTwitterUrl" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/facebookUrl"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textFacebookUrl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider7" />
+
+            <TextView
+                android:id="@+id/textFacebookUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorLink"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                tools:text="cccccccc" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider8"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textFacebookUrl" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/homepageUrl"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textHomepageUrl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider8" />
+
+            <TextView
+                android:id="@+id/textHomepageUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorLink"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView19"
+                tools:text="https://www.taitosento.com/" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider9"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView21"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textHomepageUrl" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/regularHoliday"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textRegularHoliday"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider9" />
+
+            <TextView
+                android:id="@+id/textRegularHoliday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView21"
+                tools:text="金曜" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider10"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textRegularHoliday" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/businessHours"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textBusinessHours"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider10" />
+
+            <TextView
+                android:id="@+id/textBusinessHours"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView23"
+                tools:text="１４：００−２３：００" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider11"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textBusinessHours" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/explanationOfSaunaFee"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textExplanationOfSaunaFee"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider11" />
+
+            <TextView
+                android:id="@+id/textExplanationOfSaunaFee"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView25"
+                tools:text="サウナあり" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider12"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView27"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textExplanationOfSaunaFee" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/isRunningStation"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textRunningStationSupport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider12" />
+
+            <TextView
+                android:id="@+id/textRunningStationSupport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27"
+                tools:text="@string/be" />
+
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider13"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView29"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textRunningStationSupport" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/isFreeWifi"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textFreeWifiSupport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider13" />
+
+            <TextView
+                android:id="@+id/textFreeWifiSupport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintBottom_toTopOf="@+id/materialDivider14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView29"
+                tools:text="@string/be" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider14"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView31"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textFreeWifiSupport" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/stamped"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textStamped"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider14" />
+
+            <TextView
+                android:id="@+id/textStamped"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView31"
+                tools:text="@string/be" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

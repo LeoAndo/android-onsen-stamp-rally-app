@@ -16,4 +16,26 @@
     <string name="fab_message">Click if you want to contact the developer</string>
     <string name="fab_action_message">Go To Mail App</string>
     <string name="stamp_count_desc">Number of stamps required to obtain: %d</string>
+    <string name="stamped">Stamped</string>
+    <string name="stamped_status_change_message">Changed the status of the stamp</string>
+    <string name="filter_item_all">all</string>
+    <string name="filter_item_stamped">stamped</string>
+    <string name="filter_item_no_stamped">No stamp</string>
+    <string name="be">be</string>
+    <string name="none">none</string>
+    <string name="store_name">Store name</string>
+    <string name="address">address</string>
+    <string name="trafficAccess">trafficAccess</string>
+    <string name="tel">tel</string>
+    <string name="mailAddress">mailAddress</string>
+    <string name="instagramUrl">instagramUrl</string>
+    <string name="twitterUrl">twitterのURL</string>
+    <string name="facebookUrl">facebookUrl</string>
+    <string name="homepageUrl">homepageUrl</string>
+    <string name="regularHoliday">regularHoliday</string>
+    <string name="businessHours">businessHours</string>
+    <string name="explanationOfSaunaFee">explanationOfSaunaFee</string>
+    <string name="isRunningStation">isRunningStation Support</string>
+    <string name="isFreeWifi">isFreeWifi Support</string>
+    <string name="isStamped">isStamped</string>
 </resources>

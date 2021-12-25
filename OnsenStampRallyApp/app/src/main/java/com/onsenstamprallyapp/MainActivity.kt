@@ -1,10 +1,6 @@
 package com.onsenstamprallyapp
 
-import android.content.ActivityNotFoundException
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -14,6 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.snackbar.Snackbar
 import com.onsenstamprallyapp.databinding.ActivityMainBinding
+import com.onsenstamprallyapp.ui.util.AppLaunchHelper
 import com.onsenstamprallyapp.ui.widget.ToastHelper
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -28,6 +25,9 @@ internal class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var toastHelper: ToastHelper
 
+    @Inject
+    lateinit var appLaunchHelper: AppLaunchHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -36,14 +36,16 @@ internal class MainActivity : AppCompatActivity() {
 
         binding.appBarMain.fab.setOnClickListener { view ->
             Snackbar.make(view, view.context.getString(R.string.fab_message), Snackbar.LENGTH_LONG)
-                .setAction(view.context.getString(R.string.fab_action_message), View.OnClickListener {
+                .setAction(
+                    view.context.getString(R.string.fab_action_message)
+                ) {
                     val ctx = it.context
-                    launchExternalMailApp(
+                    appLaunchHelper.launchMailApp(
                         ctx.getString(R.string.developer_mail_address),
                         ctx.getString(R.string.mail_subject),
                         ctx.getString(R.string.mail_text)
                     )
-                }).show()
+                }.show()
         }
 
         navController = findNavController(R.id.nav_host_fragment_content_main)
@@ -58,22 +60,6 @@ internal class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)
 
-    }
-
-
-    private fun launchExternalMailApp(address: String, subject: String, text: String) {
-        Intent(Intent.ACTION_SENDTO).apply {
-            data = Uri.parse("mailto:")
-            putExtra(Intent.EXTRA_EMAIL, arrayOf(address))
-            putExtra(Intent.EXTRA_SUBJECT, subject)
-            putExtra(Intent.EXTRA_TEXT, text)
-        }.let {
-            try {
-                startActivity(it)
-            } catch (exception: ActivityNotFoundException) {
-                toastHelper.showToast(exception.localizedMessage)
-            }
-        }
     }
 
     // TODO option menuは蓋とじ-START
