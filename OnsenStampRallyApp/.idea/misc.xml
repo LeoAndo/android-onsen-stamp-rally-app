@@ -20,6 +20,7 @@
         <entry key="app/src/main/res/layout/fragment_onsen_stamped_list.xml" value="0.13677811550151975" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_stamped_list.xml" value="0.14311043566362716" />
+        <entry key="app/src/main/res/layout/goods_list_item.xml" value="0.335" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/onsen_list_item.xml" value="0.45" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.33177083333333335" />
