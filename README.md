@@ -46,10 +46,11 @@
     - 画面遷移は、Navigation Graphを使用する
     - Toolbarを持たない
     - viewModelで定義されている１つのLiveDataを監視し、UI更新を行う
+    - エラーハンドリングはTrowableの型によって適切なエラー表示(ダイアログ、トースト、テキスト)を行う
   - viewModel
     - try catchはviewModelで行う
     - Fragmentに処理結果を返す手段はLivedata
-    - １つのLiveDataを定義し、値はseald interfaceで定義されたオブジェクトを指定する
+    - １つのLiveDataを定義し、値はseald interfaceで定義されたオブジェクトを指定する (Error用はThrowableをデータとして持つ)
     - FlowのcollectはviewModelで行う
 
 - domain Layer
