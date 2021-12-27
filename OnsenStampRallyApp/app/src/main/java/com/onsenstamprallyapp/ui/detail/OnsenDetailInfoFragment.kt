@@ -7,7 +7,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.onsenstamprallyapp.R
 import com.onsenstamprallyapp.databinding.FragmentOnsenDetailBinding
-import com.onsenstamprallyapp.log.LogTag
 import com.onsenstamprallyapp.model.OnsenInfoDetail
 import com.onsenstamprallyapp.ui.util.AppLaunchHelper
 import com.onsenstamprallyapp.ui.util.showErrorDialog
@@ -19,7 +18,6 @@ import javax.inject.Inject
 @AndroidEntryPoint
 internal class OnsenDetailInfoFragment : Fragment(R.layout.fragment_onsen_detail) {
     private val binding by viewBindings(FragmentOnsenDetailBinding::bind)
-    private val logTag by LogTag()
     private val navArgs by navArgs<OnsenDetailInfoFragmentArgs>()
     private val viewModel by viewModels<OnsenDetailInfoViewModel>()
 
@@ -37,9 +35,11 @@ internal class OnsenDetailInfoFragment : Fragment(R.layout.fragment_onsen_detail
         viewModel.uistate.observe(viewLifecycleOwner) {
             when (it) {
                 is UiState.Error -> {
-                    showErrorDialog(it.errorMessage, onPositiveButtonClicked = {
+                    showErrorDialog(
+                        it.throwable.localizedMessage ?: "error.",
+                        onPositiveButtonClicked = {
 
-                    })
+                        })
                 }
                 is UiState.Success -> {
                     updateUi(it.onsenInfo)

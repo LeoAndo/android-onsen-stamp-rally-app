@@ -32,7 +32,7 @@ class OnsenDetailInfoViewModel @Inject constructor(
     fun getOnsenInfo(id: Int) {
         // oneshot
         viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
-            _uistate.value = UiState.Error(throwable.localizedMessage)
+            _uistate.value = UiState.Error(throwable)
         }) {
             _uistate.value = UiState.Success(repository.getOnsenInfoDetail(id))
         }

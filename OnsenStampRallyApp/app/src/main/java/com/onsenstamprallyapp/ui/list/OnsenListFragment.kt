@@ -36,9 +36,11 @@ internal class OnsenListFragment : Fragment(R.layout.fragment_onsen_list) {
         viewModel.uistate.observe(viewLifecycleOwner) {
             when (it) {
                 is UiState.Error -> {
-                    showErrorDialog(it.errorMessage, onPositiveButtonClicked = {
+                    showErrorDialog(
+                        it.throwable.localizedMessage ?: "error..",
+                        onPositiveButtonClicked = {
 
-                    })
+                        })
                 }
                 is UiState.Success -> {
                     onsenListAdapter.submitList(it.onsenList)

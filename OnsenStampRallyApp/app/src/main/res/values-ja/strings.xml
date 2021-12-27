@@ -37,4 +37,11 @@
     <string name="isRunningStation">ランニングステーション サポート</string>
     <string name="isFreeWifi">Free wifi サポート</string>
     <string name="isStamped">スタンプ済み</string>
+    <string name="error_message_browser_app">ブラウザアプリをインストールしてください</string>
+    <string name="error_message_facebook_app">Facebookアプリをインストールしてください</string>
+    <string name="error_message_instagram_app">Instagramアプリをインストールしてください</string>
+    <string name="error_message_twitter_app">Twitterアプリをインストールしてください</string>
+    <string name="error_message_gmail_app">Gmailアプリをインストールしてください</string>
+    <string name="error_message_tel_app">電話アプリをインストールしてください</string>
+    <string name="error_message_map_app">Google Mapアプリをインストールしてください</string>
 </resources>

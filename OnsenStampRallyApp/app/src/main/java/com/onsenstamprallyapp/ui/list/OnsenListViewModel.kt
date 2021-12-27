@@ -27,7 +27,7 @@ internal class OnsenListViewModel @Inject constructor(
 
         // Flow
         viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
-            _uistate.value = UiState.Error(throwable.localizedMessage)
+            _uistate.value = UiState.Error(throwable)
         }) {
             repository.observeOnsenInfoList().collect { OnsenInfoList ->
                 val filterOnsenInfoList = when (selectedFilterItem) {
@@ -49,7 +49,7 @@ internal class OnsenListViewModel @Inject constructor(
         selectedFilterItem = SelectedFilterItem.values().first { it.ordinal == filterItemId }
 
         viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
-            _uistate.value = UiState.Error(throwable.localizedMessage)
+            _uistate.value = UiState.Error(throwable)
         }) {
             val ret = when (selectedFilterItem) {
                 SelectedFilterItem.ALL -> {
@@ -69,7 +69,7 @@ internal class OnsenListViewModel @Inject constructor(
     fun updateStampStatus(id: Int, isStamped: Boolean) {
         viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
             // Faire
-            _uistate.value = UiState.Error(throwable.localizedMessage)
+            _uistate.value = UiState.Error(throwable)
         }) {
             // Success
             repository.updateStampStatus(id, isStamped)
