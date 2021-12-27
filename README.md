@@ -4,6 +4,12 @@
 スタンプ管理以外にも、各銭湯の詳細画面から外部アプリ「Google Map, GMail, Phone, Twitter, Facebook, Browser」などを起動し、銭湯の詳細情報をすぐに確認できるところがポイントです。<br>
 また、ビルドタイプを切り替えるだけで同じようなアプリを作る仕組みにしているのも特徴です。<br>
 
+# Play Store リンク
+
+[東京ゆらん 2021](https://play.google.com/store/apps/details?id=com.onsenstamprallyapp.tokyoyuran2021)<br>
+[浅草湯めぐり 2021](https://play.google.com/store/apps/details?id=com.onsenstamprallyapp.asakusayumeguri2021)<br>
+※ 現在、審査中。
+
 # キャプチャ (東京ゆらん 2021)
 
 ## Pixcel 5 OS 12
