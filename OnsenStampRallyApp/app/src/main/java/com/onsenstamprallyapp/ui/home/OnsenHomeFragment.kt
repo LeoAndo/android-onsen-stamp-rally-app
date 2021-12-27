@@ -71,9 +71,11 @@ internal class OnsenHomeFragment : Fragment(R.layout.fragment_onsen_home) {
         viewModel.uistate.observe(viewLifecycleOwner) {
             when (it) {
                 is UiState.Error -> {
-                    showErrorDialog(it.errorMessage, onPositiveButtonClicked = {
+                    showErrorDialog(
+                        it.throwable.localizedMessage ?: "error..",
+                        onPositiveButtonClicked = {
 
-                    })
+                        })
                 }
                 is UiState.Success -> {
                     listAdapter.submitList(it.onsenList)

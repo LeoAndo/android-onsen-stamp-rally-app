@@ -26,7 +26,7 @@ class OnsenHomeViewModel @Inject constructor(
 
         // oneshot
         viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
-            _uistate.value = UiState.Error(throwable.localizedMessage)
+            _uistate.value = UiState.Error(throwable)
         }) {
             repository.setupOnsenData()
         }
@@ -34,7 +34,7 @@ class OnsenHomeViewModel @Inject constructor(
         // Flow
         viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
             // Failure
-            _uistate.value = UiState.Error(throwable.localizedMessage)
+            _uistate.value = UiState.Error(throwable)
         }) {
             // Success
             repository.observeOnsenInfoList().collect {
@@ -52,8 +52,7 @@ class OnsenHomeViewModel @Inject constructor(
     fun updateStampStatus(id: Int, isStamped: Boolean) {
         viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
             // Faire
-            _uistate.value =
-                UiState.Error(throwable.localizedMessage)
+            _uistate.value = UiState.Error(throwable)
         }) {
             // Success
             repository.updateStampStatus(id, isStamped)
