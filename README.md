@@ -8,7 +8,6 @@
 
 [東京ゆらん 2021](https://play.google.com/store/apps/details?id=com.onsenstamprallyapp.tokyoyuran2021)<br>
 [浅草湯めぐり 2021](https://play.google.com/store/apps/details?id=com.onsenstamprallyapp.asakusayumeguri2021)<br>
-※ 現在、審査中。
 
 # キャプチャ (東京ゆらん 2021)
 
