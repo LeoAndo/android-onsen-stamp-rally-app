@@ -37,4 +37,11 @@
     <string name="isRunningStation">isRunningStation Support</string>
     <string name="isFreeWifi">isFreeWifi Support</string>
     <string name="isStamped">isStamped</string>
+    <string name="error_message_browser_app">Please Install Browser Application.</string>
+    <string name="error_message_facebook_app">Please Install Facebook Application.</string>
+    <string name="error_message_instagram_app">Please Install Instagram Application.</string>
+    <string name="error_message_twitter_app">Please Install Twitter Application.</string>
+    <string name="error_message_gmail_app">Please Install Gmail Application.</string>
+    <string name="error_message_tel_app">Please Install Telephone Application.</string>
+    <string name="error_message_map_app">Please Install Google Map Application.</string>
 </resources>
