@@ -2,9 +2,9 @@
 
     <string name="action_settings">設定</string>
     <string name="first_fragment_label">ホーム</string>
-    <string name="second_fragment_label">温泉リスト</string>
+    <string name="second_fragment_label">今日やること</string>
     <string name="nav_header_desc">ナビゲーション ヘッダー</string>
-    <string name="goods_list_fragment_label">グッズ一覧</string>
+    <string name="goods_list_fragment_label">振り返り</string>
     <string name="filter_search">絞り込み</string>
     <string name="detail">詳細</string>
     <string name="error_dialog_title">エラー</string>
@@ -18,8 +18,8 @@
     <string name="stamped">スタンプ済み</string>
     <string name="stamped_status_change_message">スタンプのステータスを変更しました</string>
     <string name="filter_item_all">全て</string>
-    <string name="filter_item_stamped">スタンプ済み</string>
-    <string name="filter_item_no_stamped">スタンプなし</string>
+    <string name="filter_item_stamped">チェック済み</string>
+    <string name="filter_item_no_stamped">チェックなし</string>
     <string name="be">あり</string>
     <string name="none">なし</string>
     <string name="store_name">店舗名</string>
