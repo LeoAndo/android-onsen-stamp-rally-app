@@ -66,9 +66,9 @@
 
 # ソースコード
 
-[共通コード](https://github.com/LeoAndo/android-onsen-stamp-rally-app/tree/main/OnsenStampRallyApp/app/src/main)<br>
-[東京ゆらん 2021専用コード](https://github.com/LeoAndo/android-onsen-stamp-rally-app/tree/main/OnsenStampRallyApp/app/src/tokyoyuran2021)<br>
-[浅草湯めぐり 2021専用コード](https://github.com/LeoAndo/android-onsen-stamp-rally-app/tree/main/OnsenStampRallyApp/app/src/asakusayumeguri2021)<br>
+[共通コード](https://github.com/LeoAndo/android-onsen-stamp-rally-app/tree/main/app/src/main)<br>
+[東京ゆらん 2021専用コード](https://github.com/LeoAndo/android-onsen-stamp-rally-app/tree/main/app/src/tokyoyuran2021)<br>
+[浅草湯めぐり 2021専用コード](https://github.com/LeoAndo/android-onsen-stamp-rally-app/tree/main/app/src/asakusayumeguri2021)<br>
 
 # 使用ライブラリ
 
