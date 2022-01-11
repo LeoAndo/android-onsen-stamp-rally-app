@@ -5,13 +5,13 @@ import com.onsenstamprallyapp.model.Goods
 internal object GoodsData {
     val dataList = listOf(
         Goods(
-            title = "Monaca",
-            description = "Monaca を使ったアプリ開発を行いました",
+            title = "オリジナルタオル",
+            description = "各銭湯の名前が入ったオリジナルタオル全11種",
             stamps = 5
         ),
         Goods(
-            title = "Unityのインストール",
-            description = "手順書を見ながら、Unityの環境構築を行いました",
+            title = "オリジナルマスク",
+            description = "浅草銭湯オリジナルマスク全1種",
             stamps = 8
         ),
     )

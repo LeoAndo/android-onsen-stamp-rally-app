@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Unity 1回目</string>
-    <string name="lbl_period">本日の授業は、Unityのインストールが済んでいる前提で進めていきます。</string>
-    <string name="lbl_description"></string>
+    <string name="app_name">浅草湯めぐり2021</string>
+    <string name="lbl_period">12月1日から1月30日まで</string>
+    <string name="lbl_description">スタンプを集めてオリジナルグッズを手に入れよう！</string>
 </resources>
