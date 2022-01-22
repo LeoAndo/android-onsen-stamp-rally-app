@@ -4,6 +4,13 @@
 スタンプ管理以外にも、各銭湯の詳細画面から外部アプリ「Google Map, GMail, Phone, Twitter, Facebook, Browser」などを起動し、銭湯の詳細情報をすぐに確認できるところがポイントです。<br>
 また、ビルドタイプを切り替えるだけで同じようなアプリを作る仕組みにしているのも特徴です。<br>
 
+# MAD Score
+
+![summary](https://user-images.githubusercontent.com/16476224/150647191-dca49d17-abc6-4f1e-a0c7-bd74033b5f71.png)
+![jetpack](https://user-images.githubusercontent.com/16476224/150647185-e3a64755-1105-49be-b3ca-245f0b349a28.png)
+![kotlin](https://user-images.githubusercontent.com/16476224/150647188-8de75391-1d47-4912-8535-454ed0193cbb.png)
+![studio](https://user-images.githubusercontent.com/16476224/150647189-7eb40205-ed72-42bb-9a98-754a131a8dbc.png)
+
 # Play Store リンク
 
 [東京ゆらん 2021](https://play.google.com/store/apps/details?id=com.onsenstamprallyapp.tokyoyuran2021)<br>
