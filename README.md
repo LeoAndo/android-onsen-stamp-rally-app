@@ -57,12 +57,11 @@
   - Fragment
     - 画面遷移は、Navigation Graphを使用する
     - Toolbarを持たない
-    - viewModelで定義されている１つのLiveDataを監視し、UI更新を行う
+    - viewModelで定義されている１つのLiveDataを監視し、UI更新を行う(UiState)
     - エラーハンドリングはTrowableの型によって適切なエラー表示(ダイアログ、トースト、テキスト)を行う
   - viewModel
-    - try catchはviewModelで行う
     - Fragmentに処理結果を返す手段はLivedata
-    - １つのLiveDataを定義し、値はseald interfaceで定義されたオブジェクトを指定する (Error用はThrowableをデータとして持つ)
+    - １つのLiveDataを定義し、値はseald interfaceで定義されたオブジェクトを指定する (Error用はThrowableをデータとして持つ)(UiState)
     - FlowのcollectはviewModelで行う
 
 - domain Layer
@@ -70,6 +69,7 @@
 
 - data Layer
   - [room](https://developer.android.com/training/data-storage/room?hl=ja)を使用してローカルデータベースを管理
+  - Exceptionが発生した場合、sealedで定義したobjectに変換し、処理結果を返す
 
 # ソースコード
 
