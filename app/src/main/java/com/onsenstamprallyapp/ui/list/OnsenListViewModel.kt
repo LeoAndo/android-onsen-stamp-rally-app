@@ -4,7 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.onsenstamprallyapp.data.repository.OnsenInfoRepository
+import com.onsenstamprallyapp.data.SafeResult
+import com.onsenstamprallyapp.domain.repository.OnsenInfoRepository
 import com.onsenstamprallyapp.log.LogTag
 import com.onsenstamprallyapp.log.LogWrapper
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -48,9 +49,7 @@ internal class OnsenListViewModel @Inject constructor(
     fun getOnsenList(filterItemId: Int) {
         selectedFilterItem = SelectedFilterItem.values().first { it.ordinal == filterItemId }
 
-        viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
-            _uistate.value = UiState.Error(throwable)
-        }) {
+        viewModelScope.launch {
             val ret = when (selectedFilterItem) {
                 SelectedFilterItem.ALL -> {
                     repository.getAllOnsenInfoList()
@@ -62,7 +61,14 @@ internal class OnsenListViewModel @Inject constructor(
                     repository.getNoStampedOnsenInfoList()
                 }
             }
-            _uistate.value = UiState.Success(ret)
+            when (ret) {
+                is SafeResult.Error -> {
+                    _uistate.value = UiState.Error(ret.errorResult)
+                }
+                is SafeResult.Success -> {
+                    _uistate.value = UiState.Success(ret.data)
+                }
+            }
         }
     }
 

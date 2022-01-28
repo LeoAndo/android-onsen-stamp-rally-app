@@ -43,6 +43,6 @@
         android:label="@string/detail">
         <argument
             android:name="onsenInfo"
-            app:argType="com.onsenstamprallyapp.model.OnsenInfo" />
+            app:argType="com.onsenstamprallyapp.domain.model.OnsenInfo" />
     </fragment>
 </navigation>

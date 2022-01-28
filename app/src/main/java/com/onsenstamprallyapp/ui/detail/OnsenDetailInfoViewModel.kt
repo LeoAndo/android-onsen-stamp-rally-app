@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.onsenstamprallyapp.data.repository.OnsenInfoRepository
+import com.onsenstamprallyapp.data.SafeResult
+import com.onsenstamprallyapp.domain.repository.OnsenInfoRepository
 import com.onsenstamprallyapp.log.LogTag
 import com.onsenstamprallyapp.log.LogWrapper
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -30,11 +30,15 @@ class OnsenDetailInfoViewModel @Inject constructor(
     }
 
     fun getOnsenInfo(id: Int) {
-        // oneshot
-        viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
-            _uistate.value = UiState.Error(throwable)
-        }) {
-            _uistate.value = UiState.Success(repository.getOnsenInfoDetail(id))
+        viewModelScope.launch {
+            when (val onsenData = repository.getOnsenInfoDetail(id)) {
+                is SafeResult.Error -> {
+                    _uistate.value = UiState.Error(onsenData.errorResult)
+                }
+                is SafeResult.Success -> {
+                    _uistate.value = UiState.Success(onsenData.data)
+                }
+            }
         }
     }
 }

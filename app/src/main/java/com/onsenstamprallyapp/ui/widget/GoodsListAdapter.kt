@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.onsenstamprallyapp.R
-import com.onsenstamprallyapp.model.Goods
+import com.onsenstamprallyapp.domain.model.Goods
 import com.onsenstamprallyapp.ui.widget.GoodsListAdapter.VH
 
 internal class GoodsListAdapter() : ListAdapter<Goods, VH>(ITEM_CALLBACK) {
