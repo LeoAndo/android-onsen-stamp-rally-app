@@ -2,8 +2,8 @@ package com.onsenstamprallyapp.data.room.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.onsenstamprallyapp.model.OnsenInfo
-import com.onsenstamprallyapp.model.OnsenInfoDetail
+import com.onsenstamprallyapp.domain.model.OnsenInfo
+import com.onsenstamprallyapp.domain.model.OnsenInfoDetail
 
 internal const val TABLE_NAME_ONSEN = "onsen"
 

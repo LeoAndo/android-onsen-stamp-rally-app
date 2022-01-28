@@ -1,6 +1,6 @@
 package com.onsenstamprallyapp.data.di
 
-import com.onsenstamprallyapp.data.repository.OnsenInfoRepository
+import com.onsenstamprallyapp.domain.repository.OnsenInfoRepository
 import com.onsenstamprallyapp.data.repository.impl.OnsenInfoRepositoryImpl
 import dagger.Binds
 import dagger.Module

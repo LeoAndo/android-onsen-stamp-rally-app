@@ -1,4 +1,4 @@
-package com.onsenstamprallyapp.model
+package com.onsenstamprallyapp.domain.model
 
 import java.io.Serializable
 

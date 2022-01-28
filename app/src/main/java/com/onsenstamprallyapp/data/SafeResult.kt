@@ -2,18 +2,17 @@ package com.onsenstamprallyapp.data
 
 import android.util.Log
 import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 /**
  * A generic class that holds a value or an exception
  */
-internal sealed class SafeResult<out R> {
+sealed class SafeResult<out R> {
     data class Success<out T>(val data: T) : SafeResult<T>()
     data class Error(val errorResult: ErrorResult) : SafeResult<Nothing>()
 }
 
-internal sealed class ErrorResult : Exception() {
+sealed class ErrorResult : Exception() {
     data class UnAuthorizedError(override val message: String? = "UnAuthorizedError") :
         ErrorResult()
 
@@ -30,20 +29,20 @@ internal sealed class ErrorResult : Exception() {
         ErrorResult()
 }
 
-internal fun <T> SafeResult<T>.successOr(fallback: T): T {
+fun <T> SafeResult<T>.successOr(fallback: T): T {
     return (this as? SafeResult.Success<T>)?.data ?: fallback
 }
 
-suspend fun <T> dbCall(
-    dispatcher: CoroutineDispatcher = Dispatchers.IO,
+internal suspend fun <T> safeCall(
+    dispatcher: CoroutineDispatcher,
     apiCall: suspend () -> T
-): T {
+): SafeResult<T> {
     return withContext(dispatcher) {
-        Log.w("dbCall", "currentThread: " + Thread.currentThread().name)
+        Log.w("safeCall", "currentThread: " + Thread.currentThread().name)
         try {
-            apiCall.invoke()
+            SafeResult.Success(apiCall.invoke())
         } catch (e: Throwable) {
-            throw ErrorResult.OtherError(e.localizedMessage)
+            SafeResult.Error(ErrorResult.OtherError(e.localizedMessage))
         }
     }
 }

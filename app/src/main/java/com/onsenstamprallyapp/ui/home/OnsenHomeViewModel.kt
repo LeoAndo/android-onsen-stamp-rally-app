@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.onsenstamprallyapp.data.repository.OnsenInfoRepository
+import com.onsenstamprallyapp.domain.repository.OnsenInfoRepository
 import com.onsenstamprallyapp.log.LogTag
 import com.onsenstamprallyapp.log.LogWrapper
 import dagger.hilt.android.lifecycle.HiltViewModel

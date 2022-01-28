@@ -1,6 +1,6 @@
 package com.onsenstamprallyapp.data
 
-import com.onsenstamprallyapp.model.Goods
+import com.onsenstamprallyapp.domain.model.Goods
 
 internal object GoodsData {
     val dataList = listOf(

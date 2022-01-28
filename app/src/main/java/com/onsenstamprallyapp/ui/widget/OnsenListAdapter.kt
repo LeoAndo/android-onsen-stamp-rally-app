@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.onsenstamprallyapp.R
 import com.onsenstamprallyapp.log.LogTag
 import com.onsenstamprallyapp.log.LogWrapper
-import com.onsenstamprallyapp.model.OnsenInfo
+import com.onsenstamprallyapp.domain.model.OnsenInfo
 
 internal class OnsenListAdapter(
     private val onItemClick: (OnsenInfo) -> Unit,

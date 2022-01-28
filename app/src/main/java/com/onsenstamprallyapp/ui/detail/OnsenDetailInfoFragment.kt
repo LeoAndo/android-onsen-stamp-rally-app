@@ -7,7 +7,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.onsenstamprallyapp.R
 import com.onsenstamprallyapp.databinding.FragmentOnsenDetailBinding
-import com.onsenstamprallyapp.model.OnsenInfoDetail
+import com.onsenstamprallyapp.domain.model.OnsenInfoDetail
 import com.onsenstamprallyapp.ui.util.AppLaunchHelper
 import com.onsenstamprallyapp.ui.util.showErrorDialog
 import com.onsenstamprallyapp.ui.util.viewBindings

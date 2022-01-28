@@ -1,4 +1,4 @@
-package com.onsenstamprallyapp.model
+package com.onsenstamprallyapp.domain.model
 
 
 internal data class Goods(

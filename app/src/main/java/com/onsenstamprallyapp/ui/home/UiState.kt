@@ -1,6 +1,6 @@
 package com.onsenstamprallyapp.ui.home
 
-import com.onsenstamprallyapp.model.OnsenInfo
+import com.onsenstamprallyapp.domain.model.OnsenInfo
 
 sealed interface UiState {
     data class Success(val onsenList: List<OnsenInfo>) : UiState
