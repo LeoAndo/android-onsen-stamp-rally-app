@@ -79,4 +79,4 @@
 
 # 使用ライブラリ
 
-https://github.com/LeoAndo/android-onsen-stamp-rally-app/blob/main/OnsenStampRallyApp/app/build.gradle#L58:L86
+https://github.com/LeoAndo/android-onsen-stamp-rally-app/blob/main/app/build.gradle#L58:L86
